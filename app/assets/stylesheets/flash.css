@@ -1,0 +1,57 @@
+.welcome-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background: #eef0f3;
+    height: 100vh;
+    padding: 4%;
+  }
+  
+  .welcome-container,
+  .login,
+  .logout {
+    text-align: center;
+  }
+  
+  .login {
+    background: #3778c2;
+    margin-top: 60%;
+  }
+  
+  .login,
+  .logout {
+    padding: 4%;
+  }
+  
+  .login a,
+  .logout a {
+    text-decoration: none;
+    font-size: 30px;
+    padding: 4%;
+  }
+  
+  .login a {
+    color: #fff;
+  }
+  
+  .logout a {
+    color: #434b54;
+  }
+  
+  .fade-in {
+    opacity: 0;
+    animation: fade-in-animation 1s ease-in-out forwards;
+  }
+  
+  @keyframes fade-in-animation {
+    0% {
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+  
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  

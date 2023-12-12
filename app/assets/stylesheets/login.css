@@ -1,0 +1,80 @@
+@import "avatars";
+
+.login-header,
+.user-input,
+.avatar {
+  display: flex;
+}
+
+.login-header {
+  justify-content: space-between;
+  align-items: center;
+  background-color: #3778c2;
+  padding: 4%;
+}
+
+.login-btn {
+  background-color: #3778c2;
+  border: none;
+  font-size: 20px;
+}
+
+.login-header,
+.login-btn,
+.fa-arrow-left {
+  color: #fff;
+}
+
+.login-btn,
+.fa-arrow-left {
+  cursor: pointer;
+}
+
+.user-input {
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.name,
+.email,
+.password {
+  width: 100vw;
+  font-size: 20px;
+  padding: 5%;
+}
+
+.password,
+.forgot-pass {
+  margin-bottom: 30px;
+}
+
+.pass-length {
+  padding-left: 4%;
+}
+
+.fa-arrow-left {
+  text-decoration: none;
+}
+
+.error-container {
+  padding: 4%;
+}
+
+.notice,
+.alert {
+  text-align: center;
+}
+
+.avatar {
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.avatar-placeholder {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #ccc;
+}
