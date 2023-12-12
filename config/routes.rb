@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
-  root to: 'home#index'
-  get 'home/index', to: 'home#index'
+  # root to: 'flash#index'
+  # get 'flash/index', to: 'flash#index'
+  root to: "categories#index"
   
   devise_for :users
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html

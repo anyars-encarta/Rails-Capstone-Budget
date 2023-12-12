@@ -1,6 +1,6 @@
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <div class="login-header">
-    <%= link_to "", home_index_path, class: "fas fa-arrow-left" %>
+    
     <h2>Edit <%= resource_name.to_s.humanize %></h2>
     <div class="actions">
         <%= f.submit "Update" %>

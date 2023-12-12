@@ -1,0 +1,60 @@
+<div class="categories">
+  <div class="cat-header">
+    <div class="top">
+      <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+
+      <h2>TRANSACTIONS</h2>
+      <%= image_tag("search-icon.png", alt: "search icon", class: "search-icon") %>
+    </div>
+
+    <div class="middle">
+      <% if user_signed_in? %>
+        <form action="<%= destroy_user_session_path %>" method="post">
+          <input type="hidden" name="_method" value="delete">
+          <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+          <button type="submit" class="btn btn-danger">Logout</button>
+        </form>
+      <% end %>
+
+      <div class="bottom">
+        <p>Most recent</p>
+        <p>Most ancient</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="gift">
+    <p class="g-label">Gift credit</p>
+    <p class="g-amount">$2,500.00</p>
+  </div>
+
+  
+  <ul class="exp-group">
+    <% @categories.each do |category| %>
+      <li>
+        <a class="list-gtoup" href="/categories/<%= category.id %>">
+          <div class="icon-group">
+            <%= image_tag category.icon, class: "exp-icon" %>
+                
+            <div class="icon-details">
+              <div class="icon-text">
+                <p class="cname" style="text-decoration: none"><%= category.name %></p>
+                <span class="amount"><%= category.expenses.sum(:amount) %></span>
+              </div>
+                  
+              <p class="cdate"><%= category.created_at.strftime("%d %b %Y") %></p>
+            </div>
+          </div>
+        </a>
+      </li>
+    <% end %>
+
+    <div class="add-btn">
+      <a href="/categories/new">Add a new category</a>
+    </div>
+  </ul>
+</div>
