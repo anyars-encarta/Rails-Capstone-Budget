@@ -25,9 +25,19 @@
     <%= form_for(@category || Category.new, :html => {:class => "form-horizontal", :role => "form"}) do |f| %>
         <div class="new-cat-input">
             <%= f.text_field :name, class: "form-control", required: true, placeholder: "Category Name" %>
-            <%= f.text_field :icon, class: "form-control", required: true, placeholder: "Category Icon" %>
-        </div>
 
-        <%= f.submit "SAVE", class: "btn btn-primary" %>
+            <!-- Input field for selecting an image file -->
+            <%= f.file_field :icon_file, class: "form-control", accept: "image/*", required: true, onchange: "previewImage(this)" %>
+            
+            <!-- Image preview container -->
+            <div id="image-preview"></div>
+
+            <!-- Hidden field to store the image path -->
+            <%= f.hidden_field :icon, class: "form-control", id: "icon-path" %>
+        </div>
+        
+        <div class="cat-submit">
+          <%= f.submit "SAVE", class: "btn btn-primary" %>
+        </div>
     <% end %>
 </div>

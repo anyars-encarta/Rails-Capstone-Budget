@@ -3,7 +3,7 @@
 }
 
 .form-control {
-    /* width: 100%; */
+    width: 90%;
     font-size: 20px;
     padding: 5%;
 }
@@ -16,5 +16,26 @@
     padding: 4%;
     background-color: #fff;
     margin-bottom: 100px;
+    gap: 50px;
+}
+
+#image-preview {
+   display: none;
+}
+
+.cat-submit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-primary {
+    font-size: 40px;
+    padding: 4%;
+    width: 100vh;
+    background-color: #5fb523;
+    color: #fff;
+    cursor: pointer;
+    border: none;
 }
 
