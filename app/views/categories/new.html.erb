@@ -22,13 +22,12 @@
         </div>
     </div>
 
-    <form action="/categories" method="post">
+    <%= form_for(@category || Category.new, :html => {:class => "form-horizontal", :role => "form"}) do |f| %>
         <div class="new-cat-input">
-            <input type="text" class="form-control" placeholder="Category Name" id="name" name="name" required>
-        
-            <input type="text" class="form-control" placeholder="Category Icon" id="icon" name="icon" required>
+            <%= f.text_field :name, class: "form-control", required: true, placeholder: "Category Name" %>
+            <%= f.text_field :icon, class: "form-control", required: true, placeholder: "Category Icon" %>
         </div>
 
-        <button type="submit" class="btn btn-primary">SAVE</button>
-    </form>
+        <%= f.submit "SAVE", class: "btn btn-primary" %>
+    <% end %>
 </div>
