@@ -18,7 +18,11 @@ default: &default
   # For details on connection pooling, see Rails configuration guide
   # https://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-
+  timeout: 5000
+  username: postgres
+  password: Alcatraz@1982
+  host: localhost
+  
 development:
   <<: *default
   database: rails_capstone_budget_development
