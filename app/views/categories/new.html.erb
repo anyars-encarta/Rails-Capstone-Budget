@@ -1,0 +1,34 @@
+<div class="categories">
+    <div class="cat-header new-category">
+        <div class="top">
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+
+            <h2>ADD NEW CATEGORY</h2>
+            <%= image_tag("search-icon.png", alt: "search icon", class: "search-icon") %>
+        </div>
+
+        <div class="middle">
+            <% if user_signed_in? %>
+                <form action="<%= destroy_user_session_path %>" method="post">
+                <input type="hidden" name="_method" value="delete">
+                <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+                <button type="submit" class="btn btn-danger">Logout</button>
+                </form>
+            <% end %>
+        </div>
+    </div>
+
+    <form action="/categories" method="post">
+        <div class="new-cat-input">
+            <input type="text" class="form-control" placeholder="Category Name" id="name" name="name" required>
+        
+            <input type="text" class="form-control" placeholder="Category Icon" id="icon" name="icon" required>
+        </div>
+
+        <button type="submit" class="btn btn-primary">SAVE</button>
+    </form>
+</div>

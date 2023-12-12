@@ -1,0 +1,20 @@
+.new-category {
+    margin-bottom: 30px;
+}
+
+.form-control {
+    width: 100vh;
+    font-size: 20px;
+    padding: 5%;
+}
+
+.new-cat-input {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4%;
+    background-color: #fff;
+    margin-bottom: 100px;
+}
+
