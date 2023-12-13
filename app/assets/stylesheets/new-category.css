@@ -1,56 +1,55 @@
 .form-horizontal {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .new-category {
-    margin-bottom: 30px;
+  margin-bottom: 30px;
 }
 
 .form-control {
-    width: 90%;
-    font-size: 20px;
-    padding: 5%;
+  width: 90%;
+  font-size: 20px;
+  padding: 5%;
 }
 
 .category-bottom-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-right: 4%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 4%;
 }
 
 .new-cat-input {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 4%;
-    background-color: #fff;
-    margin-bottom: 100px;
-    gap: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 4%;
+  background-color: #fff;
+  margin-bottom: 100px;
+  gap: 50px;
 }
 
 #image-preview {
-   display: none;
+  display: none;
 }
 
 .cat-submit {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }
 
 .btn-primary {
-    font-size: 40px;
-    padding: 4%;
-    width: 100vh;
-    background-color: #5fb523;
-    color: #fff;
-    cursor: pointer;
-    border: none;
+  font-size: 40px;
+  padding: 4%;
+  width: 100vh;
+  background-color: #5fb523;
+  color: #fff;
+  cursor: pointer;
+  border: none;
 }
-

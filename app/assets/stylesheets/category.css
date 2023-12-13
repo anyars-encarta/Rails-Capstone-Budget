@@ -1,51 +1,51 @@
 .categories {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    border: 1px solid #434b54;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border: 1px solid #434b54;
 }
 
 .cat-header {
-    display: flex;
-    flex-direction: column;
-    background-color: #3778c2;
-    padding: 4%;
-    margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  background-color: #3778c2;
+  padding: 4%;
+  margin-bottom: 10px;
 }
 
 .hamburger {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .hamburger,
-  .search-icon {
-    cursor: pointer;
-  }
-  
-  .bar {
-    width: 30px;
-    margin-bottom: 10px;
-    border: 1px solid #fff;
-  }
+  display: flex;
+  flex-direction: column;
+}
+
+.hamburger,
+.search-icon {
+  cursor: pointer;
+}
+
+.bar {
+  width: 30px;
+  margin-bottom: 10px;
+  border: 1px solid #fff;
+}
 
 .search-icon {
-    width: 50px;
-    height: 50px;
+  width: 50px;
+  height: 50px;
 }
 
 .top {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .middle {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .btn-danger {
@@ -57,63 +57,63 @@
 }
 
 .btn-danger:hover {
-    background-color: white;
-    color: #3778c2;
+  background-color: white;
+  color: #3778c2;
 }
 
 .bottom {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    gap: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 20px;
 }
 
 .cat-header h2,
 .fa-magnifying-glass,
 .bottom p {
-    color: #fff;
+  color: #fff;
 }
 
 .gift {
-    display: flex;
-    justify-content: space-between;
-    background-color: #fff;
-    padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+  padding: 10px;
 }
 
 .g-label {
-    color: #434b54;
+  color: #434b54;
 }
 
 .g-amount {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .exp-group {
-    display: flex;
-    flex-direction: column;
-    list-style-type: none;
-    justify-content: space-between;
-    padding: 4%;
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  justify-content: space-between;
+  padding: 4%;
 }
 
 .exp-icon {
-    width: 80px;
-    height: 80px;
+  width: 80px;
+  height: 80px;
 }
 
 .list-group {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #fff;
-    margin-bottom: 10px;
-    padding: 4%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  margin-bottom: 10px;
+  padding: 4%;
 }
 
 .icon-group {
-    display: flex;
-    gap: 10px;
+  display: flex;
+  gap: 10px;
 }
 
 .cname {
@@ -136,31 +136,31 @@
 }
 
 .icon-details {
-    display: flex;
-    flex-direction: column;
-    min-width: 37vh;
-    max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  min-width: 37vh;
+  max-width: 100%;
 }
 
 .icon-text {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .add-btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #5fb523;
-    height: 80px;
-    padding: 4%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #5fb523;
+  height: 80px;
+  padding: 4%;
 }
 
 .add-btn a {
-    text-decoration: none;
-    border: 1px solid #fff;
-    font-size: 30px;
-    color: #fff;
-    padding: 4%;
+  text-decoration: none;
+  border: 1px solid #fff;
+  font-size: 30px;
+  color: #fff;
+  padding: 4%;
 }

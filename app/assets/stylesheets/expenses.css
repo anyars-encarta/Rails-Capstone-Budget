@@ -1,60 +1,57 @@
 .exp-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #3778c2;
-    padding: 4% 8% 4% 4%;
-    margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #3778c2;
+  padding: 4% 8% 4% 4%;
+  margin-bottom: 10px;
 }
 
 .btn-logout {
-    background: none;
-    border: 1px solid white;
-    color: white;
-    padding: 20%;
-    cursor: pointer;
+  background: none;
+  border: 1px solid white;
+  color: white;
+  padding: 20%;
+  cursor: pointer;
 }
 
 .exp-header h2 {
-    color: #fff;
+  color: #fff;
 }
 
 .expenses-bottom-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-right: 4%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 4%;
 }
 
 .expenses-details {
-    background-color: #fff;
-    margin: 0 4% 0 4%;
-    padding: 4%;
+  background-color: #fff;
+  margin: 0 4% 0 4%;
+  padding: 4%;
 }
 
 .exp-top {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .exp-top h1 {
-    color: #434b54;
-    font-size: 20px;
+  color: #434b54;
+  font-size: 20px;
 }
 
 .dated {
-    display: flex;
-    align-items: center;
-    gap: 5px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
 
 .total {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.total {
-    font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
 }
