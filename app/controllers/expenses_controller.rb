@@ -11,23 +11,30 @@ class ExpensesController < ApplicationController
       @expense = Expense.new
 
       rescue ActiveRecord::RecordNotFound
-      # Handle the case where the category is not found, such as redirecting to a different page or showing an error message
+  
       redirect_to categories_path, alert: 'Category not found'
     end
 
     def create
-      @category = Category.find(expense_params[:category_id])
-      @expense = @category.expenses.new(expense_params)
-        if @expense.save
-          redirect_to category_expenses_path(@category), notice: 'Expense was successfully added.'
-        else
-          render :new
-        end
+      name = params[:expense][:name]
+      amount = params[:expense][:amount].to_i
+      category_id = params[:expense][:category_id].to_i
+      user_id = current_user.id
+  
+      success, result = Expense.new.save_expense(name, amount, category_id, user_id)
+  
+      if success
+        @category = Category.find(category_id)
+        redirect_to category_expenses_path(@category), notice: 'Expense was successfully added.'
+      else
+        flash.now[:alert] = "Expense could not be saved: #{result.join(', ')}"
+        render :new
+      end
     end
 
   private
 
   def expense_params
-    params.require(:expense).permit(:name, :amount, :category_id)
+    params.require(:expense).permit(:name, :amount, :category_id, :user_id)
   end
 end
