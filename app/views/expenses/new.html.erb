@@ -7,12 +7,12 @@
                 <span class="bar"></span>
             </div>
 
-            <h2>NEW CATEGORY</h2>
+            <h2>NEW TRANSACTION</h2>
             <%= image_tag("search-icon.png", alt: "search icon", class: "search-icon") %>
         </div>
         
-        <div class="category-bottom-header">
-            <%= link_to "", categories_path, class: "fas fa-arrow-left" %>
+        <div class="expenses-bottom-header">
+            <%= link_to "", request.referer, class: "fas fa-arrow-left" %>
 
             <div class="middle">
                 <% if user_signed_in? %>
@@ -26,18 +26,12 @@
         </div>
     </div>
 
-    <%= form_for(@category || Category.new, :html => {:class => "form-horizontal", :role => "form"}) do |f| %>
+    <%= form_for([@category, @expense || Expense.new], :html => {:class => "form-horizontal", :role => "form"}) do |f| %>
         <div class="new-cat-input">
-            <%= f.text_field :name, class: "form-control", required: true, placeholder: "Category Name" %>
-
-            <!-- Input field for selecting an image file -->
-            <%= f.file_field :icon_file, class: "form-control", accept: "image/*", required: true, onchange: "previewImage(this)" %>
-            
-            <!-- Image preview container -->
-            <div id="image-preview"></div>
-
-            <!-- Hidden field to store the image path -->
-            <%= f.hidden_field :icon, class: "form-control", id: "icon-path" %>
+            <%= f.text_field :name, class: "form-control", required: true, placeholder: "Expense Name" %>
+            <%= f.number_field :amount, class: "form-control", required: true, placeholder: "Expense Amount" %>
+            <!-- Other form fields -->
+            <%= f.hidden_field :category_id, value: @category.id %>
         </div>
         
         <div class="cat-submit">

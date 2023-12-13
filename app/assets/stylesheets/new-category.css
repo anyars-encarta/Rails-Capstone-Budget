@@ -1,3 +1,9 @@
+.form-horizontal {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 .new-category {
     margin-bottom: 30px;
 }
@@ -6,6 +12,13 @@
     width: 90%;
     font-size: 20px;
     padding: 5%;
+}
+
+.category-bottom-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 4%;
 }
 
 .new-cat-input {
@@ -25,8 +38,10 @@
 
 .cat-submit {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 10px;
 }
 
 .btn-primary {

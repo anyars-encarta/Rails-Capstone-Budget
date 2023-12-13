@@ -7,7 +7,7 @@
         <span class="bar"></span>
       </div>
 
-      <h2>TRANSACTIONS</h2>
+      <h2>CATEGORIES</h2>
       <%= image_tag("search-icon.png", alt: "search icon", class: "search-icon") %>
     </div>
 
@@ -36,7 +36,7 @@
   <ul class="exp-group">
     <% @categories.each do |category| %>
       <li>
-        <a class="list-group" href="/categories/<%= category.id %>">
+        <%= link_to category_expenses_path(category), class: "list-group" do %>
           <div class="icon-group">
             <%= image_tag category.icon, class: "exp-icon" %>
                 
@@ -49,7 +49,7 @@
               <p class="cdate"><%= category.created_at.strftime("%d %b %Y") %></p>
             </div>
           </div>
-        </a>
+        <% end %>
       </li>
     <% end %>
 

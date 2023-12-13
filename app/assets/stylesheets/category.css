@@ -95,6 +95,7 @@
     display: flex;
     flex-direction: column;
     list-style-type: none;
+    justify-content: space-between;
     padding: 4%;
 }
 
@@ -121,16 +122,12 @@
   margin-top: 5px;
   color: #434b54;
   font-size: 24px;
+  text-decoration: none;
 }
 
 .cdate {
   color: #434b54;
   font-size: 18px;
-}
-
-.cname {
-  margin-bottom: 0;
-  text-decoration: none;
 }
 
 .amount {
@@ -160,7 +157,8 @@
     background-color: #5fb523;
     height: 80px;
     padding: 4%;
-    margin-top: 60px;
+    /* margin-top: 60px; */
+    /* margin-bottom: 0; */
 }
 
 .add-btn a {
