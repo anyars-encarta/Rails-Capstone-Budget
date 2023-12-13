@@ -1,0 +1,56 @@
+.right-menu {
+  display: none;
+}
+
+.bar {
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: black;
+}
+
+.hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(1) {
+  transform: translateY(10px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(3) {
+  transform: translateY(-10px) rotate(-45deg);
+}
+
+.right-menu.active {
+  display: block;
+  position: fixed;
+  flex-direction: column;
+  gap: 70px;
+  width: 100%;
+  list-style-type: none;
+  background-color: #f78c89;
+  padding: 20px 0 20px 20px;
+  z-index: 99;
+  height: 100%;
+  left: 0;
+  top: 50px;
+}
+
+.right-menu.active li {
+  margin-bottom: 30px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid rgb(247, 243, 243);
+  width: 95%;
+}
+
+.right-menu.active .red {
+  border-bottom: none;
+}
+
+.right-menu.active a {
+  text-decoration: none;
+  color: #272a31;
+  font-family: 'Lato', sans-serif;
+  font-weight: 800;
+  font-size: 34px;
+  line-height: 16.8px;
+}

@@ -8,6 +8,11 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
+    <%= javascript_include_tag "hamburger" %>
+    
+    <%= stylesheet_link_tag "hamburger", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+
     <%= stylesheet_link_tag "main", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
 

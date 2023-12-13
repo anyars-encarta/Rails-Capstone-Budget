@@ -4,6 +4,8 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable, :confirmable
 
+  attr_accessor :admin
+
   validates :name, presence: true
 
   has_many :categories
