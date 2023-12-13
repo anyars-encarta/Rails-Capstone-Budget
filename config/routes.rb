@@ -1,10 +1,18 @@
 Rails.application.routes.draw do
-  # root to: 'flash#index'
-  # get 'flash/index', to: 'flash#index'
-  root to: "categories#index"
+  devise_for :users, controllers: {
+    registrations: 'users/registrations'
+  } 
   
-  devise_for :users
+  authenticated :user do
+    root 'categories#index', as: :authenticated_root
+  end
 
+  unauthenticated do
+    root 'flash#index', as: :unauthenticated_root
+  end
+
+  root to: 'flash#index'
+  
   get "/categories", to: "categories#index"
   get "categories/new", to: "categories#new"
   post "/categories", to: "categories#create"
@@ -13,16 +21,10 @@ Rails.application.routes.draw do
 
   get "expenses/new", to: "expenses#new"
   post "/expenses", to: "expenses#create"
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-
-  # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
-  # Can be used by load balancers and uptime monitors to verify that the app is live.
+  
   get "up" => "rails/health#show", as: :rails_health_check
 
-  resources :categories do
-    resources :expenses, only: [:new, :create]
+  resources :categories, only: %i[index new show create] do
+    resources :expenses, only: %i[index new create edit update destroy]
   end
-  # resources :avatars, only: [:index, :create, :update, :destroy]
-  # Defines the root path route ("/")
-  # root to: "categories#index"
 end
