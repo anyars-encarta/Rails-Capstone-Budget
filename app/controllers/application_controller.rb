@@ -8,9 +8,6 @@ class ApplicationController < ActionController::Base
     stored_location_for(resource) || categories_path
   end
 
-  # new_user_registration_path
-  # new_user_session_path
-
   def after_sign_up_path_for(resource)
     # groups_path
     stored_location_for(resource) || categories_path
