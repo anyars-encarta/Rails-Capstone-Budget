@@ -8,8 +8,6 @@
 .cat-header {
     display: flex;
     flex-direction: column;
-    /* justify-content: center;
-    align-items: center; */
     background-color: #3778c2;
     padding: 4%;
     margin-bottom: 10px;
@@ -157,8 +155,6 @@
     background-color: #5fb523;
     height: 80px;
     padding: 4%;
-    /* margin-top: 60px; */
-    /* margin-bottom: 0; */
 }
 
 .add-btn a {

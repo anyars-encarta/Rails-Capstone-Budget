@@ -43,7 +43,7 @@
             <div class="icon-details">
               <div class="icon-text">
                 <p class="cname" style="text-decoration: none"><%= category.name %></p>
-                <span class="amount"><%= category.expenses.sum(:amount) %></span>
+                <p class="amount">$<%= number_with_precision(category.expenses.sum(:amount), precision: 2, delimiter: ',', separator: '.') %></p>
               </div>
                   
               <p class="cdate"><%= category.created_at.strftime("%d %b %Y") %></p>

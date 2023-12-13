@@ -33,7 +33,7 @@
 
     <div class="total">
       <p>TOTAL EXPENSES</p>
-      <p>$<%= @category.expenses.sum(:amount) %></p>
+      <p>$<%= number_with_precision(@category.expenses.sum(:amount), precision: 2, delimiter: ',', separator: '.') %></p>
     </div>
   </div>
 
