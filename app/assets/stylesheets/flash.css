@@ -1,0 +1,74 @@
+.welcome-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background: #eef0f3;
+  height: 100vh;
+  padding: 4%;
+  bottom: 0;
+}
+
+.welcome-container,
+.login,
+.logout {
+  text-align: center;
+}
+
+.login {
+  background: #3778c2;
+  margin-top: 25%;
+}
+
+.logout {
+  border: 1px solid #3778c2;
+  margin-bottom: 60px;
+}
+
+.login,
+.logout {
+  padding: 4%;
+  cursor: pointer;
+}
+
+.login a,
+.logout a {
+  text-decoration: none;
+  font-size: 30px;
+  padding: 4%;
+}
+
+.login a {
+  color: #fff;
+}
+
+.logout a {
+  color: #434b54;
+}
+
+.login:hover {
+  background: none;
+  border: 1px solid #3778c2;
+  color: #3778c2;
+}
+
+.logout:hover {
+  background: #3778c2;
+  color: #fff;
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fade-in-animation 1s ease-in-out forwards;
+}
+
+@keyframes fade-in-animation {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
