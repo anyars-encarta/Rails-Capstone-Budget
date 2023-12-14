@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   get "/categories", to: "categories#index"
   get "categories/new", to: "categories#new"
   post "/categories", to: "categories#create"
-  
+  get 'flash/index'
   get "/categories/:id/expenses", to: "expenses#index", as: :category_expenses
 
   get "expenses/new", to: "expenses#new"
