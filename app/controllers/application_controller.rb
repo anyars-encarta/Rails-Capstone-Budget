@@ -12,7 +12,7 @@ class ApplicationController < ActionController::Base
     # groups_path
     stored_location_for(resource) || categories_path
   end
-  
+
   protected
 
   def configure_permitted_parameters
