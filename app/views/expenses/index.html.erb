@@ -12,7 +12,14 @@
     <% end %>
   </div>
 
+  <div class="total">
+    <p>TOTAL EXPENSES</p>
+    <p>$<%= number_with_precision(@category.expenses.sum(:amount), precision: 2, delimiter: ',', separator: '.') %></p>
+  </div>
+  <hr>
+
   <div class="expenses-details">
+    
     <div class="exp-top">
       <%= image_tag @category.icon, class: "exp-icon" %>
       <h1><%= @category.name %></h1>
@@ -30,11 +37,6 @@
       </div>
     <% end %>
     <hr>
-
-    <div class="total">
-      <p>TOTAL EXPENSES</p>
-      <p>$<%= number_with_precision(@category.expenses.sum(:amount), precision: 2, delimiter: ',', separator: '.') %></p>
-    </div>
   </div>
 
   <div class="add-btn">
