@@ -15,7 +15,7 @@
       </ul>
 
       <h2>CATEGORIES</h2>
-      <%= image_tag("search-icon.png", alt: "search icon", class: "search-icon") %>
+      <%= image_tag("search-icon.png", alt: "search icon", class: "search-icon", id: "searchIcon") %>
     </div>
 
     <div class="middle">
@@ -34,12 +34,17 @@
     </div>
   </div>
 
+  <!-- Search bar -->
+  <div class="search-field" id="searchField">
+    <input type="text" placeholder="Search category by name" id="searchInput">
+    <button id="closeSearch">Close</button>
+  </div>
+
   <div class="gift">
     <p class="g-label">Gift credit</p>
     <p class="g-amount">$2,500.00</p>
   </div>
 
-  
   <ul class="exp-group">
     <% @categories.each do |category| %>
       <li>
@@ -49,7 +54,7 @@
                 
             <div class="icon-details">
               <div class="icon-text">
-                <p class="cname" style="text-decoration: none"><%= category.name %></p>
+                <p class="cname"><%= category.name %></p>
                 <p class="amount">$<%= number_with_precision(category.expenses.sum(:amount), precision: 2, delimiter: ',', separator: '.') %></p>
               </div>
                   
