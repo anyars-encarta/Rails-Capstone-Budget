@@ -10,12 +10,10 @@
   flex-direction: column;
   background-color: #3778c2;
   padding: 4%;
-  /* margin-bottom: 10px; */
 }
 
 .search-field {
-  /* display: none; */
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   padding: 4%;
