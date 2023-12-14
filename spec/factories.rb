@@ -2,7 +2,7 @@
 FactoryBot.define do
     factory :category do
       name { 'Sample category' }
-      icon { 'image path' }
+      icon { Category::ICONS.keys.sample }
       association :user
     end
   

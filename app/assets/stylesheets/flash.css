@@ -5,6 +5,7 @@
   background: #eef0f3;
   height: 100vh;
   padding: 4%;
+  bottom: 0;
 }
 
 .welcome-container,
@@ -15,12 +16,29 @@
 
 .login {
   background: #3778c2;
-  margin-top: 60%;
+  margin-top: 25%;
+}
+
+.login:hover {
+  background: none;
+  border: 1px solid #3778c2;
+  color: #3778c2;
+}
+
+.logout:hover {
+  background: #3778c2;
+  color: #fff;
+}
+
+.logout {
+  border: 1px solid #3778c2;
+  margin-bottom: 60px;
 }
 
 .login,
 .logout {
   padding: 4%;
+  cursor: pointer;
 }
 
 .login a,

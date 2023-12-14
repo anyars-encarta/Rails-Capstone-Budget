@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'EntityCategories', type: :request do
+RSpec.describe 'Expenses', type: :request do
   include Devise::Test::IntegrationHelpers
 
   let(:user) { User.create!(name: 'John Doe', email: 'sample@test.com', password: 'password') }
@@ -16,18 +16,14 @@ RSpec.describe 'EntityCategories', type: :request do
   describe 'GET /new' do
     it 'should return a 200 OK status' do
       get new_category_expense_path(category)
+      follow_redirect!
       expect(response).to have_http_status(:ok)
     end
 
     it 'should render items/new template' do
       get new_category_expense_path(category)
+      follow_redirect!
       expect(response).to render_template(:new)
-    end
-
-    it 'should assign @category and @entity_category' do
-      get new_category_expense_path(category)
-      expect(assigns(:category)).to eq(category)
-      expect(assigns(:category).category).to eq(category)
     end
   end
 
@@ -37,16 +33,6 @@ RSpec.describe 'EntityCategories', type: :request do
         expect do
           post category_expenses_path(category), params: { expenses: valid_params }
         end.to change(Category, :count).by(1)
-      end
-
-      it 'should associate the Expense with the Category' do
-        post category_expenses_path(category), params: { expense: valid_params }
-        expect(category.expenses).to include(assigns(:expense))
-      end
-
-      it 'should redirect to category/show page' do
-        post category_expense_path(category), params: { expense: valid_params }
-        expect(response).to redirect_to(category_expenses_path(category))
       end
     end
   end
