@@ -18,7 +18,6 @@ class Expense < ApplicationRecord
 
     return true, expense if expense.save
 
-
     [false, expense.errors.full_messages]
   end
 end
