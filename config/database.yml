@@ -84,5 +84,5 @@ test:
 production:
   <<: *default
   database: rails_capstone_budget_production
-  username: rails_capstone_budget
-  password: <%= ENV["RAILS_CAPSTONE_BUDGET_DATABASE_PASSWORD"] %>
+  username: postgres
+  password: Alcatraz@1982
