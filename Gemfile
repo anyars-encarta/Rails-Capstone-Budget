@@ -2,10 +2,6 @@ source 'https://rubygems.org'
 
 ruby '3.2.2'
 
-gem 'dotenv-rails', groups: %i[development test]
-
-gem 'dotenv-rails'
-
 gem 'factory_bot_rails'
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
@@ -78,3 +74,7 @@ group :test do
 end
 
 gem 'devise', '~> 4.9'
+
+gem 'dotenv-rails', groups: %i[development test]
+
+# gem 'dotenv-rails'
