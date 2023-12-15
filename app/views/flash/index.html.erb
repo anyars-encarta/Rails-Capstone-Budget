@@ -4,7 +4,7 @@
     <div class="login-out">
         <% if user_signed_in? %>
             <p class="fade-in">You are logged in as <%= current_user.email %>.</p>
-            <p class="fade-in"><%= link_to "Log out", destroy_user_session_path, method: :delete %></p>
+            <p class="fade-in"><%= link_to "Got to the Home Page", categories_path %></p>
             <% else %>
             <p class="login fade-in"><a href="<%= new_user_session_path %>">LOG IN</a></p>
             <p class="logout fade-in"><a href="<%= new_user_registration_path %>">SIGN UP</a></p>
