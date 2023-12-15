@@ -18,15 +18,15 @@ en:
       unconfirmed: "You have to confirm your email address before continuing."
     mailer:
       confirmation_instructions:
-        subject: "Confirmation instructions"
+        subject: "e-Budget Account Confirmation Instructions"
       reset_password_instructions:
-        subject: "Reset password instructions"
+        subject: "e-Budget Account Reset password instructions"
       unlock_instructions:
-        subject: "Unlock instructions"
+        subject: "e-Budget Account Unlock instructions"
       email_changed:
-        subject: "Email Changed"
+        subject: "e-Budget Account Email Changed"
       password_change:
-        subject: "Password Changed"
+        subject: "e-Budget Account Password Changed"
     omniauth_callbacks:
       failure: "Could not authenticate you from %{kind} because \"%{reason}\"."
       success: "Successfully authenticated from %{kind} account."
