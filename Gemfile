@@ -2,12 +2,12 @@ source 'https://rubygems.org'
 
 ruby '3.2.2'
 
-gem 'factory_bot_rails', '~> 6.4.2'
-
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem 'rails', '~> 7.1.2'
 
 gem 'rails-controller-testing', '~> 1.0.5'
+
+gem 'factory_bot_rails', '~> 6.4.2'
 
 gem 'railties', '~> 7.1.2'
 
