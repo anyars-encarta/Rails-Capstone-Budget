@@ -6,7 +6,7 @@ require "rails/all"
 
 Rails.application.configure do
   # Dotenv::Railtie.load
-  Dotenv.load(".env")
+  # Dotenv.load(".env")
   # Settings specified here will take precedence over those in config/application.rb.
 
   # In the development environment your application's code is reloaded any time
@@ -51,7 +51,6 @@ Rails.application.configure do
   config.action_mailer.smtp_settings = {
     address:       'smtp.gmail.com',
     port:          587,
-    # port:          465,
     domain:         ENV['MAIL_HOST'],
     user_name:      ENV['SENDMAIL_USERNAME'],
     password:       ENV['APP_SPEC_PASSWORD'],
