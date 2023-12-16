@@ -1,11 +1,11 @@
 databases:
-  - name: e-budget
-    databaseName: e-budget_qh3v
-    user: e-budget_qh3v_user
+  - name: encarta-e-budget
+    databaseName: encarta-e-budget_qh3v
+    user: encarta-e-budget_qh3v_user
 
 services:
   - type: web
-    name: e-budget
+    name: encarta-e-budget
     runtime: ruby
     buildCommand: "./bin/render-build.sh"
     startCommand: "bundle exec puma -C config/puma.rb"
