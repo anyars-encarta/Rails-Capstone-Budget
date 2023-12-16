@@ -1,6 +1,8 @@
 require "active_support/core_ext/integer/time"
+require 'dotenv/rails-now'
 
 Rails.application.configure do
+  Dotenv::Railtie.load
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Code is not reloaded between requests.
