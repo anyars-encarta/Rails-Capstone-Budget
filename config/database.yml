@@ -20,7 +20,7 @@ default: &default
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   timeout: 5000
   username: postgres
-  password: <%= ENV["APP_PASSWORD"] %>
+  password: <%= ENV["LOCAL_APP_PASSWORD"] %>
   host: localhost
   
 development:
@@ -85,5 +85,5 @@ production:
   <<: *default
   database: rails_capstone_budget_production
   username: postgres
-  password: <%= ENV["APP_PASSWORD"] %>
+  password: <%= ENV["LOCAL_APP_PASSWORD"] %>
   url: <%= ENV['DATABASE_URL'] %>
