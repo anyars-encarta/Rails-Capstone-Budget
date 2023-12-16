@@ -86,3 +86,4 @@ production:
   database: rails_capstone_budget_production
   username: postgres
   password: <%= ENV["APP_PASSWORD"] %>
+  url: <%= ENV['DATABASE_URL'] %>
