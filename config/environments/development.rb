@@ -5,8 +5,8 @@ require 'dotenv/rails-now'
 require "rails/all"
 
 Rails.application.configure do
-  Dotenv::Railtie.load
-  # Dotenv.load(".env")
+  # Dotenv::Railtie.load
+  Dotenv.load(".env")
   # Settings specified here will take precedence over those in config/application.rb.
 
   # In the development environment your application's code is reloaded any time
