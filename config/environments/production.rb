@@ -50,6 +50,7 @@ Rails.application.configure do
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.default_url_options = { host: ENV['MAIL_HOST'] }
+  # Rails.application.config.action_mailer.default_url_options = { host: 'https://encarta-e-budget.onrender.com/' }
   # config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
     address:       'smtp.gmail.com',
