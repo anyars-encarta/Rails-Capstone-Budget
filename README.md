@@ -70,7 +70,7 @@
 
 LIVE DEMO
 
-> Visit [live](https://encarta-math-magician.onrender.com/home) page of my Profile
+> Visit [live](https://encarta-e-budget.onrender.com) page of my Profile
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -138,7 +138,7 @@ You can deploy this project using:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **Add Investoment Categories**
+- [ ] **Add Investment Categories**
 - [ ] **Add Expenses on Investments**
 - [ ] **Add Gift Categories**
 - [ ] **Add Expenses on Gifts**
@@ -179,7 +179,7 @@ Contributions, issues, and feature requests are welcome!
 - **What new features should be expected in the next release of the project?**
 
   - We are currently working on adding: 
-    - **Add Investoment Categories**
+    - **Add Investment Categories**
     - **Add Expenses on Investments**
     - **Add Gift Categories**
     - **Add Expenses on Gifts**
