@@ -6,7 +6,7 @@ require "rails/all"
 
 Rails.application.configure do
   # Dotenv::Railtie.load
-  Dotenv.load(".env")
+  # Dotenv.load(".env")
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Code is not reloaded between requests.
@@ -60,7 +60,7 @@ Rails.application.configure do
     authentication: :plain,
     enable_starttls_auto: true
   }
-  
+
   # Mount Action Cable outside main process or domain.
   # config.action_cable.mount_path = nil
   # config.action_cable.url = "wss://example.com/cable"
