@@ -1,5 +1,5 @@
 require_relative "boot"
-require 'dotenv/rails-now'
+# require 'dotenv/rails-now'
 require "rails/all"
 
 # Require the gems listed in Gemfile, including any gems
@@ -8,7 +8,7 @@ Bundler.require(*Rails.groups)
 
 module RailsCapstoneBudget
   class Application < Rails::Application
-    Dotenv::Railtie.load
+    # Dotenv::Railtie.load
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.1
 
