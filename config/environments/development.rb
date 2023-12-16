@@ -1,12 +1,12 @@
 # config/environments/development.rb
 require "active_support/core_ext/integer/time"
 # require 'dotenv/rails-now'
-require 'dotenv/load'
+# require 'dotenv/load'
 require "rails/all"
 
 Rails.application.configure do
   # Dotenv::Railtie.load
-  Dotenv.load(".env")
+  # Dotenv.load(".env")
   # Settings specified here will take precedence over those in config/application.rb.
 
   # In the development environment your application's code is reloaded any time
