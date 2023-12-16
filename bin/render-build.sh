@@ -10,5 +10,4 @@ set -o errexit
 bundle install
 bundle exec rake assets:precompile
 bundle exec rake assets:clean
-RAILS_ENV=production rails db:create
 bundle exec rake db:migrate
