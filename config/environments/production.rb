@@ -1,11 +1,11 @@
 # config/environments/production.rb
 require "active_support/core_ext/integer/time"
-# require 'dotenv/rails-now'
-# require "rails/all"
+require 'dotenv/rails-now'
+require "rails/all"
 # require 'dotenv/load'
 
 Rails.application.configure do
-  # Dotenv::Railtie.load
+  Dotenv::Railtie.load
   # Dotenv.load(".env")
   # Settings specified here will take precedence over those in config/application.rb.
 
