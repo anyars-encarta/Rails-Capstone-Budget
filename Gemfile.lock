@@ -128,7 +128,7 @@ GEM
       actionpack (>= 6.0.0)
       activesupport (>= 6.0.0)
       railties (>= 6.0.0)
-    io-console (0.7.0)
+    io-console (0.7.1)
     irb (1.10.1)
       rdoc
       reline (>= 0.3.8)
@@ -166,7 +166,7 @@ GEM
     nokogiri (1.15.5-x86_64-linux)
       racc (~> 1.4)
     orm_adapter (0.5.0)
-    parallel (1.23.0)
+    parallel (1.24.0)
     parser (3.2.2.4)
       ast (~> 2.4.1)
       racc
@@ -221,7 +221,7 @@ GEM
       zeitwerk (~> 2.6)
     rainbow (3.1.1)
     rake (13.1.0)
-    rdoc (6.6.1)
+    rdoc (6.6.2)
       psych (>= 4.0.0)
     regexp_parser (2.8.3)
     reline (0.4.1)
@@ -321,6 +321,7 @@ DEPENDENCIES
   puma (>= 5.0)
   rails (~> 7.1.2)
   rails-controller-testing
+  rdoc (= 6.6.2)
   rspec-rails
   rubocop (>= 1.0, < 2.0)
   selenium-webdriver

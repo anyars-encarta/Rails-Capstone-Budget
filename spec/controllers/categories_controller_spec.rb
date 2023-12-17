@@ -3,12 +3,12 @@ require 'rails_helper'
 RSpec.describe CategoriesController, type: :controller do
   include Devise::Test::ControllerHelpers
 
-  let(:user) { create(:user) } # Create a valid user using a factory
+  let(:user) { create(:user, confirmed_at: Time.zone.now) } # Create a valid user using a factory
 
   describe 'GET #index' do
     context 'when user is authenticated' do
       it 'renders the index template' do
-        user = create(:user)
+        user = create(:user, confirmed_at: Time.zone.now)
         sign_in user
 
         get :index
