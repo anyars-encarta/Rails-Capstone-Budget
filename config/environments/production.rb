@@ -2,10 +2,10 @@
 require "active_support/core_ext/integer/time"
 require 'dotenv/rails-now'
 require "rails/all"
-# require 'dotenv/load'
+require 'dotenv/load'
 
 Rails.application.configure do
-  # Dotenv::Railtie.load
+  Dotenv::Railtie.load
   # Dotenv.load(".env")
   # Settings specified here will take precedence over those in config/application.rb.
 
@@ -50,8 +50,7 @@ Rails.application.configure do
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.default_url_options = { host: ENV['MAIL_HOST'] }
-  # Rails.application.config.action_mailer.default_url_options = { host: 'https://encarta-e-budget.onrender.com/' }
-  # config.action_mailer.delivery_method = :smtp
+  
   config.action_mailer.smtp_settings = {
     address:       'smtp.gmail.com',
     port:          587,
