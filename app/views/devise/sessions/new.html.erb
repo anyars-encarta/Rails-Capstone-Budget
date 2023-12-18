@@ -1,6 +1,6 @@
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="login-header">
-    <%= link_to "", request.referer, class: "fas fa-arrow-left" %>
+    <%= link_to "", root_path, class: "fas fa-arrow-left" %>
     <h2>LOGIN</h2>
     <div class="actions">
       <%= f.submit "Log in", class: "login-btn" %>

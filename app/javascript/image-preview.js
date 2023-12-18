@@ -1,5 +1,4 @@
     function redirectToIndex() {
-      // Redirect to the categories index page
       window.location.href = "/categories";
     }
 
@@ -11,11 +10,10 @@
           reader.onload = function (e) {
               var img = new Image();
               img.src = e.target.result;
-              img.style.maxWidth = '100px'; // Adjust the image preview size
-              preview.innerHTML = ''; // Clear previous preview
+              img.style.maxWidth = '100px';
+              preview.innerHTML = '';
               preview.appendChild(img);
 
-              // Set the icon path to the hidden field
               document.getElementById('icon-path').value = e.target.result;
           };
 
