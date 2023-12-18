@@ -70,7 +70,7 @@
 
 LIVE DEMO
 
-> Visit [live](https://encarta-e-budget.onrender.com) page of my Profile
+> Visit [live](https://encarta-e-budget.onrender.com) page of the app.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
