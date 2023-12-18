@@ -2,6 +2,7 @@ require 'rails_helper'
 
 RSpec.describe CategoriesController, type: :controller do
   include Devise::Test::ControllerHelpers
+  include Devise::Test::IntegrationHelpers
 
   let(:user) { create(:user, confirmed_at: Time.zone.now) } # Create a valid user using a factory
 
@@ -20,6 +21,7 @@ RSpec.describe CategoriesController, type: :controller do
     context 'when user is not authenticated' do
       it 'redirects to sign in' do
         get :index
+        
         expect(response).to redirect_to(new_user_session_path)
       end
     end

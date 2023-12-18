@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe 'Categories', type: :request do
   include Devise::Test::IntegrationHelpers
 
-  let(:user) { User.create!(name: 'John Doe', email: 'sample@gmail.com', password: 'password') }
+  let(:user) { User.create!(name: 'John Doe', email: 'sample@gmail.com', password: 'password', confirmed_at: Time.zone.now) }
   let(:category) { Category.create!(name: 'Journey', icon: Category::ICONS.keys.first, user:) }
 
   before do
@@ -13,8 +13,6 @@ RSpec.describe 'Categories', type: :request do
   describe 'GET /index' do
     it 'returns http success' do
       get categories_path
-
-      follow_redirect!
 
       expect(response).to have_http_status(:success)
     end
