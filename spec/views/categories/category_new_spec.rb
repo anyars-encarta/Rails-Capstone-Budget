@@ -11,14 +11,14 @@ RSpec.describe 'Categories', type: :request do
     it 'returns http success' do
       sign_in @user
       get new_category_path
-      
+
       expect(response).to have_http_status(:success)
     end
 
     it 'should render categories/new template' do
       sign_in @user
       get new_category_path
-      
+
       expect(response).to render_template(:new)
     end
   end

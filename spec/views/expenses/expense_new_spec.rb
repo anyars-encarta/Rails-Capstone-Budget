@@ -18,7 +18,7 @@ RSpec.describe 'Expenses', type: :request do
     it 'should render categories/new template' do
       sign_in @user
       get expenses_new_path(category_id: @category.id)
-      
+
       expect(response).to render_template(:new)
     end
   end

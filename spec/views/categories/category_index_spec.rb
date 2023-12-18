@@ -3,7 +3,9 @@ require 'rails_helper'
 RSpec.describe 'Categories', type: :request do
   include Devise::Test::IntegrationHelpers
 
-  let(:user) { User.create!(name: 'John Doe', email: 'sample@gmail.com', password: 'password', confirmed_at: Time.zone.now) }
+  let(:user) do
+    User.create!(name: 'John Doe', email: 'sample@gmail.com', password: 'password', confirmed_at: Time.zone.now)
+  end
   let(:category) { Category.create!(name: 'Journey', icon: Category::ICONS.keys.first, user:) }
 
   before do
