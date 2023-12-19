@@ -1,10 +1,11 @@
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <div class="login-header">
-  <%= link_to "", root_path, class: "fas fa-arrow-left" %>
-    <h2>REGISTER</h2>
-    <div class="actions">
-      <%= f.submit "Next", class: "login-btn" %>
-    </div>
+    <%= link_to "", root_path, class: "fas fa-arrow-left" %>
+      <h2>REGISTER</h2>
+      
+      <div class="actions">
+        <%= f.submit "Next", class: "login-btn" %>
+      </div>
   </div>
 
   <div class="user-input">
@@ -25,7 +26,7 @@
     </div>
 
     <div class="field">
-    <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "Confirm Password", class: "password" %>
+      <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "Confirm Password", class: "password" %>
     </div>
 
     <%= render "devise/shared/error_messages", resource: resource %>
