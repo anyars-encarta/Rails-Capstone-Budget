@@ -84,6 +84,19 @@
   gap: 20px;
 }
 
+.bottom .active {
+  color: #fff;
+}
+
+.bottom .inactive {
+  color: #434b54;
+}
+
+.recent,
+.ancient {
+  cursor: pointer;
+}
+
 .cat-header h2,
 .fa-magnifying-glass,
 .bottom p {
