@@ -192,7 +192,7 @@
   align-items: center;
   background-color: #5fb523;
   height: 80px;
-  padding: 4%;
+  padding: 4% 0 4% 0;
   bottom: 0;
   width: 100%;
 }
