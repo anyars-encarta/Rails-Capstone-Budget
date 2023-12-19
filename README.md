@@ -70,7 +70,7 @@
 
 LIVE DEMO
 
-> Visit [live](https://encarta-e-budget.onrender.com) page of the app.
+> Watch [live](https://www.loom.com/share/c7a1e2a230da49d7bdf6af6a488893ac) demo of the app or visit the app [page](https://encarta-e-budget.onrender.com) to use the app.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
