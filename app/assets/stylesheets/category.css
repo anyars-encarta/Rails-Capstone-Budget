@@ -144,6 +144,7 @@
 .icon-group {
   display: flex;
   gap: 10px;
+  width: 100%;
 }
 
 .icon-details p {
@@ -153,7 +154,7 @@
 .cname {
   margin-top: 5px;
   color: #434b54;
-  font-size: 24px;
+  font-size: 20px;
   text-decoration: none;
 }
 
@@ -172,8 +173,7 @@
 .icon-details {
   display: flex;
   flex-direction: column;
-  min-width: 37vh;
-  max-width: 100%;
+  width: 100%;
 }
 
 .icon-text {
