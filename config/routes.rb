@@ -17,6 +17,6 @@ Rails.application.routes.draw do
   get "/expenses", to: "expenses#index"
 
   resources :categories, only: %i[index new show create] do
-    resources :expenses, only: %i[index new create edit update destroy]
+    resources :expenses, only: %i[index new create edit update destroy new]
   end
 end
