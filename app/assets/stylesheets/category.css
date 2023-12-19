@@ -120,6 +120,7 @@
 
 .exp-group {
   padding: 2% 4% 2% 0;
+  margin-bottom: 100px;
 }
 
 .exp-group ul {
@@ -139,6 +140,7 @@
   margin-left: -25px;
   padding: 4%;
   text-decoration: none;
+  border-bottom: 1px solid #434b54;
 }
 
 .icon-group {
@@ -181,12 +183,6 @@
   justify-content: space-between;
   align-items: center;
   gap: 5px;
-}
-
-.category-separator {
-  width: 145%;
-  margin-left: -100px;
-  border: 1px solid #434b54;
 }
 
 .add-btn {
