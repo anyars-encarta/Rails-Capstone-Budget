@@ -1,44 +1,45 @@
 <div class="expenses-page">
-  <div class="exp-header">
-    <%= link_to "", categories_path, class: "fas fa-arrow-left" %>
-    <h2>TRANSACTIONS</h2>
+  <div class="expenses-container">
+    <div class="exp-header">
+      <%= link_to "", categories_path, class: "fas fa-arrow-left" %>
+      <h2>TRANSACTIONS</h2>
 
-    <% if user_signed_in? %>
-      <form action="<%= destroy_user_session_path %>" method="post">
-        <input type="hidden" name="_method" value="delete">
-        <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-        <button type="submit" class="btn btn-logout">Logout</button>
-      </form>
-    <% end %>
-  </div>
-
-  <div class="total">
-    <p>TOTAL EXPENSES</p>
-    <p>$<%= number_with_precision(@category.expenses.sum(:amount), precision: 2, delimiter: ',', separator: '.') %></p>
-  </div>
-  <hr>
-
-  <div class="expenses-details">
-    
-    <div class="exp-top">
-      <%= image_tag @category.icon, class: "exp-icon" %>
-      <h1><%= @category.name %></h1>
+      <% if user_signed_in? %>
+        <form action="<%= destroy_user_session_path %>" method="post">
+          <input type="hidden" name="_method" value="delete">
+          <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+          <button type="submit" class="btn btn-logout">Logout</button>
+        </form>
+      <% end %>
     </div>
-  
-    <% @expenses.each do |expense| %>
-      <div class="expense-detail">
-        <p><%= expense.name %></p>
-        <hr>
 
-        <div class="dated">
-          <i class="far fa-calendar"></i>
-          <p><%= expense.created_at.strftime("%d %b %Y at %I:%M %p") %></p>
-        </div>
-      </div>
-    <% end %>
+    <div class="total">
+      <p>TOTAL EXPENSES</p>
+      <p>$<%= number_with_precision(@category.expenses.sum(:amount), precision: 2, delimiter: ',', separator: '.') %></p>
+    </div>
     <hr>
-  </div>
 
+    <div class="expenses-details">
+      <div class="exp-top">
+        <%= image_tag @category.icon, class: "exp-icon" %>
+        <h1><%= @category.name %></h1>
+      </div>
+    
+      <% @expenses.each do |expense| %>
+        <div class="expense-detail">
+          <p><%= expense.name %></p>
+          <hr>
+
+          <div class="dated">
+            <i class="far fa-calendar"></i>
+            <p><%= expense.created_at.strftime("%d %b %Y at %I:%M %p") %></p>
+          </div>
+        </div>
+      <% end %>
+      <hr>
+    </div>
+  </div>
+  
   <div class="add-btn">
     <%= link_to "Add a New Transaction", new_category_expense_path(@category) %>
   </div>

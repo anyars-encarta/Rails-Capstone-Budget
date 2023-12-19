@@ -1,3 +1,10 @@
+.expenses-page {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 100vh;
+}
+
 .exp-header {
   display: flex;
   justify-content: space-between;
@@ -57,4 +64,9 @@
   font-weight: bold;
   padding: 4%;
   color: #fff;
+}
+
+.add-btn {
+  position: relative;
+  bottom: 0;
 }
