@@ -1,4 +1,3 @@
-document.addEventListener('DOMContentLoaded', () => {
     const hamburger = document.querySelector('.hamburger');
     const navMenu = document.querySelector('.right-menu');
 
@@ -11,5 +10,4 @@ document.addEventListener('DOMContentLoaded', () => {
     hamburger.classList.remove('active');
     navMenu.classList.remove('active');
     }));
-});
   

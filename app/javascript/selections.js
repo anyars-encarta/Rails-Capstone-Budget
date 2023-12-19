@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+$(document).ready(function() {
   const recent = document.querySelector(".recent");
   const ancient = document.querySelector(".ancient");
   const categoriesList = document.querySelector(".exp-group ul");

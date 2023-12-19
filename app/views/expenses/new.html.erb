@@ -26,17 +26,18 @@
         </div>
     </div>
 
-    <%= form_with(model: [@category, @expense], url: category_expenses_path(@category), local: true, method: :post, html: { class: "item-form" }) do |f| %>
+    <%= form_with(model: [@category, @expense], url: category_expenses_path(@category), local: true, method: :post, html: { class: "item-form", id: "expense-form" }) do |f| %>
         <div class="new-cat-input">
-            <%= f.text_field :name, class: "form-control", required: true, placeholder: "Expense Name" %>
-            <%= f.number_field :amount, class: "form-control", required: true, placeholder: "Expense Amount" %>
-            <!-- Other form fields -->
-            <%= f.hidden_field :category_id, value: @category.id %>
+          <%= f.text_field :name, class: "form-control", required: true, placeholder: "Expense Name" %>
+          <%= f.number_field :amount, class: "form-control", required: true, placeholder: "Expense Amount" %>
+          <!-- Other form fields -->
+          <%= f.hidden_field :category_id, value: "" %>
+          <%= f.collection_select :selected_category_id, Category.all, :id, :name, { prompt: "Select a Category" }, { class: "form-control", id: "category-select" } %>
         </div>
-        
+              
         <div class="cat-submit">
           <%= f.submit "SAVE", class: "btn btn-primary" %>
           <%= link_to "Cancel", categories_path, class: "btn btn-secondary" %>
         </div>
-    <% end %>
+      <% end %>
 </div>
