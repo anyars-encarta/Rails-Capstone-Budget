@@ -6,9 +6,7 @@ $(document).ready(function() {
     $("#closeSearch").click(function() {
       $("#searchField").hide();
     });
-});
 
-document.addEventListener('DOMContentLoaded', () => {
   $("#searchInput").on('input', function() {
     var searchText = $(this).val().toLowerCase();
     $(".exp-group li").each(function() {
