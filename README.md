@@ -39,7 +39,7 @@
 <!-- INTRO -->
 # 📖 Recipe App <a name="about-project"></a>
 
-> e-Budget is a Rails mobile web application project about managing your budget: you can create categories and have a list of transactions associated with a category, so that you can see how much money you spent and on what. Users can add Categories as well as expenses for those Categories. well as expenses for t
+> e-Budget is a Rails mobile web application project about managing your budget: you can create categories and have a list of transactions associated with a category, so that you can see how much money you spent and on what. Users can add Categories as well as expenses for those Categories. well as expenses f
 
 ## 🛠 Built With <a name="built-with"></a>
 1. Ruby
